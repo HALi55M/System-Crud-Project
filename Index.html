@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class=" bg-light">
+   
+    <div class="  py-4 mx-auto w-75 ">
+        <h3 class="py-2 text-muted  "> Product Mangement System </h3>
+       <label class="form-label text-muted" for="nameProductInput">Name Pruduct </label>
+       <input class="form-control   my-2" type="text" id="nameProductInput" required>
+
+       <label class="form-label text-muted" for="priceProductInput"> Price Pruduct </label>
+       <input class=" form-control my-2" type="number" id="priceProductInput">
+
+       <label class="form-label text-muted" for=" CategoryProductInput ">Catgery Pruduct </label>
+       <input class="  form-control my-2" type="text" id="CategoryProductInput">
+
+       <label class="form-label text-muted" for="descriptionProductInput">Description Pruduct </label>
+       <textarea class="  form-control my-2" type="" id="descriptionProductInput"></textarea>
+
+       <button onclick="addProduct()" class="btn btn-outline-primary" id="addBtn">Add Product</button>
+       <button onclick="addProduct()" class="btn btn-outline-primary d-none" id="upDateBtn">Update</button>
+    </div>
+    <div class="w-75 mx-auto p-4 my-1">
+        <label for="search" class="text-muted fw-bold"> Search:</label>
+        <input oninput="searchProduct(this.value)" type="text" class="form-control" id="search" placeholder="Enter Your Search">
+    </div>
+    <table class="table w-75 mx-auto table-active">
+        <thead  class=" text-muted">
+            <tr>
+             <th>Index</th>
+             <th>Name</th>
+             <th>Price</th>
+             <th>Category</th>
+             <th>Description</th>
+             <th> Update</th>
+             <th>Delete</th>
+         </tr>
+            
+        </thead>
+        <tbody id="tableBody"> 
+            
+        </tbody>
+    </table>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
